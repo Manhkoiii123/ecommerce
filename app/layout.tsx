@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ModalProvider } from "@/providers/modal-provider";
+import { prismadb } from "@/lib/prismadb";
+import ToastProvider from "@/providers/toast-provider";
 
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -25,6 +27,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={` ${geistMono.variable} `}>
           <ModalProvider />
+          <ToastProvider />
           {children}
         </body>
       </html>

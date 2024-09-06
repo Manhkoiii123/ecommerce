@@ -1,8 +1,6 @@
 "use client";
 
-import StoreModal from "@/components/modals/store-modal";
 import { useStoreModal } from "@/hooks/use-store-modal";
-import { stat } from "fs";
 import { useEffect } from "react";
 
 export default function SetUpPage() {
@@ -14,5 +12,5 @@ export default function SetUpPage() {
     }
   }, [isOpen, onOpen]);
 
-  return <div className="p-4">{/* <StoreModal /> */}</div>;
+  return null;
 }

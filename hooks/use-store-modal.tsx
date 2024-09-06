@@ -1,19 +1,3 @@
-# Clerk Authentication (Admin)
-
-lên clerk dashboard tạo application => ok
-
-- thêm env
-- npm install @clerk/nextjs
-- add middleware
-- add provider
-
-# setup zustand
-
-`npm i zustand`
-
-tạo `hooks/use-store-modal.tsx`
-
-```ts
 import { create } from "zustand";
 
 interface useStoreModalInterface {
@@ -27,4 +11,3 @@ export const useStoreModal = create<useStoreModalInterface>((set) => ({
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
 }));
-```

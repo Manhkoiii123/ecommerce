@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={` ${geistMono.variable} antialiased`}>
+        <body className={` ${geistMono.variable} `}>
           <ModalProvider />
           {children}
         </body>

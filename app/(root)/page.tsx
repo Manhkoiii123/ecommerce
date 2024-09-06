@@ -14,9 +14,5 @@ export default function SetUpPage() {
     }
   }, [isOpen, onOpen]);
 
-  return (
-    <div className="p-4">
-      <StoreModal />
-    </div>
-  );
+  return <div className="p-4">{/* <StoreModal /> */}</div>;
 }

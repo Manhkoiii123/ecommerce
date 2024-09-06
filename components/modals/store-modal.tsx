@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -31,12 +30,13 @@ const StoreModal = () => {
     },
   });
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
     try {
       setLoading(true);
       const res = await axios.post("/api/stores", {
         name: values.name,
       });
+      form.reset();
+      window.location.assign(`/${res.data.id}`);
       toast.success("Store created successfully");
     } catch (error) {
       console.log("🚀 ~ onSubmit ~ error:", error);
